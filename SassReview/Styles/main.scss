@@ -1,0 +1,39 @@
+// SASS Review
+
+// Importing partial file
+@import "values";
+
+#classic {
+  background-color: orange;
+
+  // Nesting
+  h1 {
+    color: white;
+  }
+  ul {
+    // SASS Variables
+    border: 10px solid $pvr;
+    // border: 10px solid palevioletred;
+    color: $pvr;
+    // color: palevioletred;
+  }
+  // Mixin
+  @include flex(space-between, flex-end);
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
+}
+
+#current {
+  border: 10px solid black;
+  // Mixin
+  @include flex(flex-end, center);
+  // display: flex;
+  // justify-content: flex-end;
+  // align-items: center;
+
+  // Extendable Class (AKA Inheritance)
+  ul {
+    @extend %styles;
+  }
+}

@@ -1,0 +1,23 @@
+// This is a SASS partial file
+
+// Variable
+$color1: #4cbb17;
+
+// Mixin
+@mixin flexbox ($position) {
+  display: flex;
+  justify-content: $position;
+  align-items: $position;
+}
+
+@mixin colors {
+  color: orange;
+  border: 3px solid yellow;
+}
+
+// Extendable class (AKA Inheritance)
+// NOTE: It is best to use an Extendable class over a Mixin unless you are creating a Mixin with a parameter(s), because an Extendable class will help to prevent repeated styles in the CSS file.
+%colors {
+  color: orange;
+  border: 3px solid yellow;
+}

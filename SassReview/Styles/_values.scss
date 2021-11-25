@@ -1,0 +1,17 @@
+// This is partial file
+
+// SASS Variable
+$pvr: palevioletred;
+
+// Mixin
+@mixin flex ($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Extendable Class (AKA Inheritance)
+%styles {
+  font-weight: bold;
+  border: 10px dashed gray;
+}
